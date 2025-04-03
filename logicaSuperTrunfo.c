@@ -8,7 +8,11 @@
 int main() {
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
-
+    
+    char estado1, estado2, codigo1[4], codigo2[4], cidade1[20], cidade2[20];
+    int ponto_turistico1, ponto_turistico2;
+    unsigned long int populacao1, populacao2;
+    float area1, area2, pib1, pib2, dens_pop1, dens_pop2, pib_per1, pib_per2, super_poder1, super_poder2, invert_dens1, invert_dens2;
     
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
@@ -18,7 +22,49 @@ int main() {
     // Exemplo:
     // printf("Digite o código da cidade: ");
     // scanf("%s", codigo);
-    // 
+    
+    printf("Digite o nome do estado: ");
+    scanf("%c", &estado1);
+    printf("Digite o nome da cidade: ");
+    scanf("%s", cidade1);
+    printf("Digite o código da cidade: ");
+    scanf("%s", codigo1);
+    printf("Digite o número de habitantes da cidade: ");
+    scanf("%d", &populacao1);
+    printf("Digite o PIB da cidade: ");
+    scanf("%f", &pib1);
+    printf("Digite a área da cidade: ");
+    scanf("%f", &area1);
+    printf("Digite o número de pontos turísticos da cidade: ");
+    scanf("%d", &ponto_turistico1);
+
+    printf("Digite o nome do estado: ");
+    scanf(" %c", &estado2);
+    printf("Digite o nome da cidade: ");
+    scanf("%s", cidade2);
+    printf("Digite o código da cidade: ");
+    scanf("%s", codigo2);
+    printf("Digite o número de habitantes da cidade: ");
+    scanf("%d", &populacao2);
+    printf("Digite o PIB da cidade: ");
+    scanf("%f", &pib2);
+    printf("Digite a área da cidade: ");
+    scanf("%f", &area2);
+    printf("Digite o número de pontos turísticos da cidade: ");
+    scanf("%d", &ponto_turistico2);
+
+    dens_pop1 = (float) populacao1 / area1;
+    pib_per1 = (float) (pib1 / populacao1) * 1000000000;
+
+    dens_pop2 = (float) populacao2 / area2;
+    pib_per2 = (float) (pib2 / populacao2) * 1000000000;
+
+    invert_dens1 = (float) 1 / dens_pop1;
+    invert_dens2 = (float) 1 / dens_pop2;
+
+    super_poder1 = (float) populacao1 + area1 + pib1 + ponto_turistico1 + pib_per1 + invert_dens1;
+    super_poder2 = (float) populacao2 + area2 + pib2 + ponto_turistico2 + pib_per2 + invert_dens2;
+
     // (Repita para cada propriedade)
 
     // Comparação de Cartas:
