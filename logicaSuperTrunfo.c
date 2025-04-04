@@ -65,6 +65,28 @@ int main() {
     super_poder1 = (float) populacao1 + area1 + pib1 + ponto_turistico1 + pib_per1 + invert_dens1;
     super_poder2 = (float) populacao2 + area2 + pib2 + ponto_turistico2 + pib_per2 + invert_dens2;
 
+    printf("\nCarta 1 \nEstado: %c\n" , estado1);
+    printf("Código: %s\n" , codigo1);
+    printf("Cidade: %s\n" , cidade1);
+    printf("População: %d habitantes\n" , populacao1);
+    printf("PIB: %.2f bilhões de reais\n" , pib1);
+    printf("Área: %.2f km²\n" , area1);
+    printf("Número de pontos turísticos: %d \n" , ponto_turistico1);
+    printf("Densidade populacional: %.2f hab/km²\n" , dens_pop1);
+    printf("PIB per capita: %.2f reais/hab\n \n" , pib_per1);
+
+    printf("Carta 2 \nEstado: %c\n" , estado2);
+    printf("Código: %s\n" , codigo2);
+    printf("Cidade: %s\n" , cidade2);
+    printf("População: %d habitantes\n" , populacao2);
+    printf("PIB: %.2f bilhões de reais\n" , pib2);
+    printf("Área: %.2f km²\n" , area2);
+    printf("Número de pontos turísticos: %d \n" , ponto_turistico2);
+    printf("Densidade populacional: %.2f hab/km²\n" , dens_pop2);
+    printf("PIB per capita: %.2f reais/hab\n\n" , pib_per2);
+
+    printf("Super poder 1: %.2f \nSuper poder 2: %.2f \n\n" , super_poder1, super_poder2);
+
     // (Repita para cada propriedade)
 
     // Comparação de Cartas:
@@ -78,6 +100,7 @@ int main() {
     //     printf("Cidade 2 tem maior população.\n");
     // }
 
+    
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
     // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
