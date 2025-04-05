@@ -11,7 +11,7 @@ int main() {
     
     char estado1, estado2, codigo1[4], codigo2[4], cidade1[20], cidade2[20];
     int ponto_turistico1, ponto_turistico2;
-    unsigned long int populacao1, populacao2;
+    int populacao1, populacao2;
     float area1, area2, pib1, pib2, dens_pop1, dens_pop2, pib_per1, pib_per2, super_poder1, super_poder2, invert_dens1, invert_dens2;
     
     // Cadastro das Cartas:
@@ -100,6 +100,47 @@ int main() {
     //     printf("Cidade 2 tem maior população.\n");
     // }
 
+    if (populacao1 > populacao2) {
+        printf("Cidade 1 tem maior população.\n");
+    } else {
+        printf("Cidade 2 tem maior população.\n");
+    }
+
+    if (pib1 > pib2) {
+        printf("Cidade 1 tem maior PIB.\n");
+    } else {
+        printf("Cidade 2 tem maior PIB.\n");
+    }
+
+    if (area1 > area2) {
+        printf("Cidade 1 tem maior área.\n");
+    } else {
+        printf("Cidade 2 tem maior área.\n");
+    }
+
+    if (ponto_turistico1 > ponto_turistico2) {
+        printf("Cidade 1 tem maior número de pontos turísticos.\n");
+    } else {
+        printf("Cidade 2 tem maior número de pontos turísticos.\n");
+    }
+
+    if (dens_pop1 > dens_pop2) {
+        printf("Cidade 1 tem maior densidade populacional.\n");
+    } else {
+        printf("Cidade 2 tem maior densidade populacional.\n");
+    }
+
+    if (pib_per1 > pib_per2) {
+        printf("Cidade 1 tem maior PIB per capita.\n");
+    } else {
+        printf("Cidade 2 tem maior PIB per capita.\n");
+    }
+
+    if (super_poder1 > super_poder2) {
+        printf("Cidade 1 tem maior Super Poder.\n");
+    } else {
+        printf("Cidade 2 tem maior Super Poder.\n");
+    }
     
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
