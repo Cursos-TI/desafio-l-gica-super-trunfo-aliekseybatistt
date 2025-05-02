@@ -10,9 +10,9 @@ int main() {
     // Você pode utilizar o código do primeiro desafio
     
     char estado1, estado2, codigo1[4], codigo2[4], cidade1[20], cidade2[20];
-    int ponto_turistico1, ponto_turistico2, opcao;
+    int ponto_turistico1, ponto_turistico2, opcao, opcao2;
     int populacao1, populacao2;
-    float area1, area2, pib1, pib2, dens_pop1, dens_pop2, pib_per1, pib_per2, super_poder1, super_poder2, invert_dens1, invert_dens2;
+    float area1, area2, pib1, pib2, dens_pop1, dens_pop2, pib_per1, pib_per2, super_poder1, super_poder2, invert_dens1, invert_dens2, soma1, soma2, valor1, valor2, valor3, valor4;
     
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
@@ -105,10 +105,14 @@ int main() {
     printf ("2. PIB\n");
     printf ("3. Área");
     printf ("4. Número de pontos turísticos\n");
-    printf ("5. Densidade populacional");
-    printf ("6. PIB per capita");
-    printf ("7. Super Poder");
+    printf ("5. Densidade populacional\n");
+    printf ("6. PIB per capita\n");
+    printf ("7. Super Poder\n");
     scanf ("%d", &opcao);
+
+    printf ("Escolha uma segunda opção de comparação para as cartas:\n");
+    scanf ("%d", &opcao2);
+
     
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
@@ -116,6 +120,8 @@ int main() {
 
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+
+    if (opcao != opcao2) {
 
     switch (opcao)
     {
@@ -128,6 +134,8 @@ int main() {
         printf ("### EMPATOU ###\n");
     }
     printf("Cidade 1: %d \nCidade 2: %d\n", populacao1, populacao2);
+    valor1 = populacao1;
+    valor2 = populacao2;
     break;
 
     case 2:
@@ -139,6 +147,8 @@ int main() {
         printf ("### EMPATOU ###\n");
     }
     printf("Cidade 1: %d \nCidade 2: %d\n", pib1, pib2);
+    valor1 = pib1;
+    valor2 = pib2;
     break;
 
     case 3:
@@ -150,6 +160,8 @@ int main() {
         printf ("### EMPATOU ###\n");
     }
     printf("Cidade 1: %d \nCidade 2: %d\n", area1, area2);
+    valor1 = area1;
+    valor2 = area2;
     break;
 
     case 4:
@@ -161,6 +173,8 @@ int main() {
         printf ("### EMPATOU ###\n");
     }
     printf("Cidade 1: %d \nCidade 2: %d\n", ponto_turistico1, ponto_turistico2);
+    valor1 = ponto_turistico1;
+    valor2 = ponto_turistico2;
     break;
 
     case 5:
@@ -172,6 +186,8 @@ int main() {
         printf ("### EMPATOU ###\n");
     }
     printf("Cidade 1: %d \nCidade 2: %d\n", dens_pop1, dens_pop2);
+    valor1 = dens_pop1;
+    valor2 = dens_pop2;
     break;
 
     case 6:
@@ -183,6 +199,8 @@ int main() {
         printf ("### EMPATOU ###\n");
     }
     printf("Cidade 1: %d \nCidade 2: %d\n", pib_per1, pib_per2);
+    valor1 = pib_per1;
+    valor2 = pib_per2;
     break;
 
     case 7:
@@ -194,11 +212,126 @@ int main() {
         printf ("### EMPATOU ###\n");
     }
     printf("Cidade 1: %d \nCidade 2: %d\n", super_poder1, super_poder2);
+    valor1 = super_poder1;
+    valor2 = super_poder2;
         break;
     
     default:
     printf("Opção inválida!\n");
         break;
+    }
+
+    switch (opcao2)
+    {
+    case 1:
+    if (populacao1 > populacao2) {
+        printf("Cidade 1 tem maior população.\n");
+    } else if (populacao1 < populacao2) {
+        printf("Cidade 2 tem maior população.\n");
+    } else {
+        printf ("### EMPATOU ###\n");
+    }
+    printf("Cidade 1: %d \nCidade 2: %d\n", populacao1, populacao2);
+    valor3 = populacao1;
+    valor4 = populacao2;
+    break;
+
+    case 2:
+    if (pib1 > pib2) {
+        printf("Cidade 1 tem maior PIB.\n");
+    } else if (pib1 < pib2){
+        printf("Cidade 2 tem maior PIB.\n");
+    } else {
+        printf ("### EMPATOU ###\n");
+    }
+    printf("Cidade 1: %d \nCidade 2: %d\n", pib1, pib2);
+    valor3 = pib1;
+    valor4 = pib2;
+    break;
+
+    case 3:
+    if (area1 > area2) {
+        printf("Cidade 1 tem maior área.\n");
+    } else if (area1 < area2) {
+        printf("Cidade 2 tem maior área.\n");
+    } else {
+        printf ("### EMPATOU ###\n");
+    }
+    printf("Cidade 1: %d \nCidade 2: %d\n", area1, area2);
+    valor3 = area1;
+    valor4 = area2;
+    break;
+
+    case 4:
+    if (ponto_turistico1 > ponto_turistico2) {
+        printf("Cidade 1 tem maior número de pontos turísticos.\n");
+    } else if (ponto_turistico1 < ponto_turistico2){
+        printf("Cidade 2 tem maior número de pontos turísticos.\n");
+    }else {
+        printf ("### EMPATOU ###\n");
+    }
+    printf("Cidade 1: %d \nCidade 2: %d\n", ponto_turistico1, ponto_turistico2);
+    valor3 = ponto_turistico1;
+    valor4 = ponto_turistico2;
+    break;
+
+    case 5:
+    if (dens_pop1 < dens_pop2) {
+        printf("Cidade 1 tem menor densidade populacional.\n");
+    } else if (dens_pop1 > dens_pop2) {
+        printf("Cidade 2 tem menor densidade populacional.\n");
+    }else {
+        printf ("### EMPATOU ###\n");
+    }
+    printf("Cidade 1: %d \nCidade 2: %d\n", dens_pop1, dens_pop2);
+    valor3 = dens_pop1;
+    valor4 = dens_pop2;
+    break;
+
+    case 6:
+    if (pib_per1 > pib_per2) {
+        printf("Cidade 1 tem maior PIB per capita.\n");
+    } else if (pib_per1 > pib_per2) {
+        printf("Cidade 2 tem maior PIB per capita.\n");
+    }else {
+        printf ("### EMPATOU ###\n");
+    }
+    printf("Cidade 1: %d \nCidade 2: %d\n", pib_per1, pib_per2);
+    valor3 = pib_per1;
+    valor4 = pib_per2;
+    break;
+
+    case 7:
+    if (super_poder1 > super_poder2) {
+        printf("Cidade 1 tem maior Super Poder.\n");
+    } else if(super_poder1 < super_poder2) {
+        printf("Cidade 2 tem maior Super Poder.\n");
+    }else {
+        printf ("### EMPATOU ###\n");
+    }
+    printf("Cidade 1: %d \nCidade 2: %d\n", super_poder1, super_poder2);
+    valor3 = super_poder1;
+    valor4 = super_poder2;
+    break;
+    
+    default:
+    printf("Opção inválida!\n");
+    break;
+    }
+
+    soma1 = valor1 + valor3;
+    soma2 = valor2 + valor4;
+
+    if (soma1 > soma2){
+        printf ("Carta 1 tem maior soma e venceu!\nSoma = %.2f", soma1);
+    } else if (soma2 > soma1){
+        printf ("Carta 2 tem maior soma e venceu!\nSoma = %.2f", soma2);
+    } else {
+        printf ("### EMPATE ###");
+    }
+
+    } else{
+        printf ("Você escolheu opções iguais");
     }
 
     return 0;
